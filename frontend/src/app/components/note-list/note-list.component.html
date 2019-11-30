@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-tab-group mat-stretch-tabs>
+    <mat-tab *ngFor="let tab of asyncTabs | async">
+      <ng-template mat-tab-label>{{tab.label}}</ng-template>
+      <ul class="list-unstyled mt-2">
+        <li class="card card-body mt-2" *ngFor="let currentNote of tab.content">
+          <h4>Note Title:{{currentNote.title}}
+            <small style="float :right"><button style="cursor: pointer" (click)="currentNote.isView = !currentNote.isView"
+                class="btn btn-dark btn-sm ml-2 " style="cursor: pointer">View</button></small>
+            <small style="float :right"><button (click)="editNote(currentNote)"
+                class="btn btn-dark btn-sm ml-2" style="cursor: pointer">Edit</button></small>
+            <small style="float :right"><button (click)="removeNote(currentNote)"
+                class="btn btn-dark btn-sm ml-2" style="cursor: pointer">Remove</button></small>
+          </h4>
+          <ul class="list group mb-2" *ngIf="currentNote.isView">
+            <li class="list-group-item">Description: {{currentNote.description}}</li>
+          </ul>
+        </li>
+      </ul>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>

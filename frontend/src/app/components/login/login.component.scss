@@ -1,0 +1,194 @@
+.logincontainer{
+  // background-image:$loginprimarybackgroundcolor;
+  background-image: linear-gradient(to right top, #282a2a, #212322, #1b1c1b, #141414, #0b0b0a);
+  font-family: 'Montserrat-Regular';
+  color: gray;
+  height: 657px;
+  width: 100%;
+  background-size: cover ;
+  background-repeat: no-repeat;
+}
+
+// Login Center
+.login {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  &__middle{
+    display: table-cell;
+    vertical-align: middle;
+    &__panel-body{
+      background: #fff;
+      padding: 5rem 5rem;
+      border-radius: 0.2rem 0.2rem;
+      &__fullwidth{
+        width:100%;
+        font-size: 15px;
+        font-family: 'Montserrat';
+      }
+      &__vanguard-logo-new  {
+        width: 12rem;
+      }
+      &__logintitle{
+        padding-bottom: 1rem;
+        padding-top: 4rem;
+        font-size: 16px;
+        font-weight: 600;
+        float: left;
+        color:#555;
+      }
+      &__signin {
+        padding-top: 2rem;
+        &__button{
+        -webkit-appearance: none;
+        width: 100%;
+        background-color: #282a2a;
+        padding: .4rem 1rem;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0.1429rem 0.1429rem 0.2858rem rgba(0, 0, 0, .4);
+    position: relative;
+    overflow: hidden;
+    background-image:linear-gradient(to right top, #1d1a32, #25263d, #2e3347, #384051, #444d5b);
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 1.143rem;
+    font-family: 'Montserrat-Medium';
+    outline: none;
+      }
+    }
+
+    }
+    &__forgot-password {
+      font-family: 'Montserrat';
+      font-size: 16px;
+      color: #ffffff;
+      margin-top: 1.4286rem;
+      text-align: center;
+      &__link{
+        cursor: pointer;
+      }
+    }
+
+    &__new-user {
+      color:#ffffff;
+      font-size: 0.857rem;
+      margin-top: 1.7143rem;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      cursor: pointer;
+    }
+
+    &__vertical-seperator{
+      height:1.5rem;
+      border:1px solid #c2c2c2;
+      margin:0 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .login {
+    &__middle{
+      &__panel-body{
+        padding: 4rem 4rem;
+
+        &__vanguard-logo-new  {
+          width: 15rem;
+        }
+        &__logintitle{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .login {
+    &__middle{
+      &__panel-body{
+        padding: 3rem 3rem;
+
+        &__vanguard-logo-new  {
+          width: 11rem;
+        }
+        &__logintitle{
+          font-size:16px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .login {
+    &__middle{
+      &__panel-body{
+        padding: 3rem 3rem;
+
+        &__vanguard-logo-new  {
+          width: 15rem;
+        }
+        &__logintitle{
+          font-size:16px;
+        }
+      }
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .login {
+    &__middle{
+      &__panel-body{
+        padding: 4rem 4rem;
+
+        &__vanguard-logo-new  {
+          width: 13rem;
+        }
+        &__logintitle{
+          font-size:16px;
+        }
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  .login {
+    &__middle{
+      &__panel-body{
+        padding: 5rem 5rem;
+
+        &__vanguard-logo-new  {
+          width: 12rem;
+        }
+        &__logintitle{
+          font-size:16px;
+        }
+      }
+    }
+  }
+}
+
+
+::ng-deep.ui-primary-button {
+  width: 100%;
+}

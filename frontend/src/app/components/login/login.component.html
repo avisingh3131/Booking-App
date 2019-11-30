@@ -1,0 +1,43 @@
+
+    <div class="logincontainer">
+        <div class="login">
+          <div class="login__middle">
+            <div class="col-xs-4 offset-xs-4 col-sm-6 offset-sm-3 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+              <div class="center-form">
+                <div class="login__middle__panel-body text-center">
+                  <div class="col-12 text-left pl-0 login__middle__panel-body__logintitle">Log in to your account </div>
+                  <form #form="ngForm" >
+                    <mat-form-field class="login__middle__panel-body__fullwidth">
+                      <input type="text" matInput name="userNameOrEmail" placeholder="Enter user name or email" [(ngModel)]="userDetails.userNameOrEmail"
+                        id="inputEmail" name="username" spellcheck="false">
+                    </mat-form-field>
+                    <mat-form-field class="login__middle__panel-body__fullwidth">
+                      <input matInput type="password" name="inputPassword" placeholder="Password"
+                        [(ngModel)]="userDetails.password" id="inputPassword" name="password" spellcheck="false">
+                    </mat-form-field>
+                    <div class="login__middle__panel-body__signin" (click)="login()">
+                      <button type="submit" class="login__middle__panel-body__signin__button">
+                        <span>
+                          <ng-container>Login</ng-container>
+                          <ng-container *ngIf="spinner"><i class="fa fa-spinner fa-spin"></i></ng-container>
+                        </span>
+                      </button>
+                    </div>
+      
+                  </form>
+      
+                </div>
+                <div class="login__middle__forgot-password">
+                  <a class="login__middle__forgot-password__link" (click)="userCantLogin()">Forgot Password?</a>
+                </div>
+                <div class="login__middle__new-user">
+                  <div class="login__middle__policy-link" (click)="openDialog()">Create New User&nbsp;</div>
+                  <div class="login__middle__vertical-seperator"></div>
+                  <div class="login__middle__terms">Terms of use</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+

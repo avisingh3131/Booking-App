@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Create Account</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.userName" placeholder="Enter user name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.userEmail" placeholder="Enter user eamil">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.password" placeholder="Enter your password">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [disabled] = '!data.userName || !data.userEmail || !data.password '  [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

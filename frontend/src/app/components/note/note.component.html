@@ -1,0 +1,27 @@
+<div class="card card-body mb-3" *ngIf="!commonService.showNoteList">
+  <h2>Add Notes</h2>
+  <form>
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" [(ngModel)]='currentNote.title' class="form-control" name="title">
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <textarea type="text" class="form-control" name="description" [(ngModel)]="currentNote.description"></textarea>
+    </div>
+
+    <button style="cursor: pointer" *ngIf="!currentNote.isEdit" (click)="addNote()"
+      [disabled]="!currentNote.title||!currentNote.description"
+      class="btn btn-dark btn-sm mb-3 cursor-pointer">Add</button>
+
+    <button style="cursor: pointer" *ngIf="currentNote.isEdit" (click)="updateNote()"
+      class="btn btn-dark btn-sm mb-3 cursor-pointer">Update</button>
+  </form>
+
+</div>
+
+
+<div class="mat-app-background basic-container" *ngIf="commonService.showNoteList">
+  <app-note-list (edit)="editNote($event)"></app-note-list>
+</div>

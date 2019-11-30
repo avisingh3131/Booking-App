@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a class="nav-link color-cursor navbar-brand" style="color: white">Notes</a>
+    <div>
+      <ul class="navbar-nav ml-auto color-cursor">
+        <li class="nav-item">
+          <a  class="nav-link" (click)=viewHome()>Home</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" (click)=viewNotes()>All Notes</a>
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link" (click)=logOut()>Log Out</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+  <app-note></app-note>
